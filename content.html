@@ -23,42 +23,35 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .c-button {
-            min-width: 100%;
-            font-family: fantasy;
-            appearance: auto;
-            border: 0;
-            border-color: #fff;
-            border-radius: 5px;
-            background: #274e13;
+        button {
+            background-color: #2f63d4;
             color: #fff;
-            font-size: 30px;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
             transition: background-color 0.3s ease;
         }
 
-        .c-button:hover {
-            background: #6aa84f;
+        button:hover {
+            background-color: #4e8ef7;
         }
 
-        .c-button:focus {
-            outline: none;
-            box-shadow: 0 0 0 4px #cbd6ee;
+        iframe {
+            width: 100%;
+            height: 400px; /* Adjust height as needed */
+            border: none;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <button onclick="openGetawayShootout()">Open Getaway Shootout</button>
+        <button onclick="openNewTabWithContent()">Open Smash Karts</button>
 
-        <div id="fr" data="<iframe width=&quot;100%&quot; height=&quot;100%&quot; src=&quot;https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/sk1bx/version@e14f9d7fa2d076a4845a22c5b0e566f7cfd0ac4b/Getaway-Shootout.xml&amp;container=ig&quot; frameborder=&quot;0&quot; allowfullscreen></iframe>
-        <button class=&quot;c-button&quot; type=&quot;button&quot; onclick=&quot;PlayTo(this)&quot; style=&quot;display: none;&quot;>Play on Classroom 6X</button>"></div>
-        <iframe src="about:blank"></iframe>
+        <div id="fr" data="<iframe width=&quot;100%&quot; height=&quot;100%&quot; src=&quot;https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/zhit73/tallteamSK@034c728950cc6399a588e338b653e6cfd3aaad1d/sk.xml&amp;container=ig&quot; frameborder=&quot;0&quot; allowfullscreen></iframe>">
+            <iframe src="about:blank"></iframe>
+        </div>
     </div>
 
     <script>
@@ -67,17 +60,11 @@
             window.location.href = "index.html";
         }
 
-        function openGetawayShootout() {
+        function openNewTabWithContent() {
             var newTab = window.open('about:blank', '_blank');
-            var gameCode = '<html><head><base target="_blank"></head><body><div id="fr" data="<iframe width=&quot;100%&quot; height=&quot;100%&quot; src=&quot;https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/sk1bx/version@e14f9d7fa2d076a4845a22c5b0e566f7cfd0ac4b/Getaway-Shootout.xml&amp;container=ig&quot; frameborder=&quot;0&quot; allowfullscreen></iframe>"><button class=&quot;c-button&quot; type=&quot;button&quot; onclick=&quot;PlayTo(this)&quot; style=&quot;display: none;&quot;>Play on Classroom 6X</button></div><script>function PlayTo(sel){var div = sel.previousSibling;div.innerHTML=div.getAttribute(&#39;data&#39;);sel.style.display = &quot;none&quot;;}</script></body></html>';
-            newTab.document.write(gameCode);
+            var content = document.getElementById('fr').getAttribute('data');
+            newTab.document.write(content);
             newTab.document.close();
-        }
-
-        function PlayTo(sel) {
-            var div = sel.previousSibling;
-            div.innerHTML = div.getAttribute('data');
-            sel.style.display = "none";
         }
     </script>
 </body>
