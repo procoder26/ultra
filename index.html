@@ -76,6 +76,21 @@
                         localStorage.setItem('authenticated', true);
                         window.location.href = "content.html";
                     } else {
+                        checkExoApproved(password);
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        }
+        
+        function checkExoApproved(password) {
+            fetch('exoapproved.txt')
+                .then(response => response.text())
+                .then(data => {
+                    var approvedPasswords = data.split('\n');
+                    if (approvedPasswords.includes(password)) {
+                        localStorage.setItem('authenticated', true);
+                        window.location.href = "mega.html";
+                    } else {
                         alert("Incorrect password. Please try again.");
                     }
                 })
