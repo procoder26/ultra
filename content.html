@@ -49,7 +49,7 @@
 <body>
     <div class="container">
         <button onclick="openNewTabWithContent()">Open Smash Karts</button>
-        <button onclick="openBlankTabWithGame()">Open Game in about:blank</button>
+        <button onclick="openBlankTabWithGame()">Open Getaway Shootout</button>
 
         <div id="fr" data="<iframe width=&quot;100%&quot; height=&quot;100%&quot; src=&quot;https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/zhit73/tallteamSK@034c728950cc6399a588e338b653e6cfd3aaad1d/sk.xml&amp;container=ig&quot; frameborder=&quot;0&quot; allowfullscreen></iframe>">
             <iframe src="about:blank"></iframe>
@@ -71,7 +71,8 @@
 
         function openBlankTabWithGame() {
             var newTab = window.open('about:blank', '_blank');
-            var gameCode = '<iframe jsname="WMhH6e" class=" YMEQtf" frameborder="0" sandbox="allow-scripts allow-popups allow-forms allow-same-origin allow-popups-to-escape-sandbox allow-downloads allow-storage-access-by-user-activation" id="6ae4a2d9c6a9b884_2496" name="6ae4a2d9c6a9b884_2496" scrolling="no" title="Custom embed" aria-label="Custom embed" src="https://www.gstatic.com/atari/embeds/83a60601c213b72fb19c1855fb0c5f26/intermediate-frame-minified.html?jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.8uXxGUoumbY.O%2Fd%3D1%2Frs%3DAHpOoo96qx3mL4tzGUOa-0q0udyPRqEAoA%2Fm%3D__features__&amp;r=801379995"></iframe>';
+            var gameCode = '<iframe id="innerFrame" name="innerFrame" sandbox="allow-scripts allow-popups allow-forms allow-same-origin allow-popups-to-escape-sandbox allow-downloads allow-storage-access-by-user-activation" frameborder="0" allowfullscreen="" src="https://677346489-atari-embeds.googleusercontent.com/embeds/16cb204cf3a9d4d223a0a3fd8b0eec5d/inner-frame-minified.html?jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.8uXxGUoumbY.O%2Fd%3D1%2Frs%3DAHpOoo96qx3mL4tzGUOa-0q0udyPRqEAoA%2Fm%3D__features__" style="overflow: auto;">
+</iframe>">;
             newTab.document.write(gameCode);
             newTab.document.close();
         }
