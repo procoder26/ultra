@@ -89,7 +89,7 @@
                     var approvedPasswords = data.split('\n');
                     if (approvedPasswords.includes(password)) {
                         localStorage.setItem('authenticated', true);
-                        window.location.href = "mega.html";
+                        window.location.href = "mega.html"; // Redirect to mega.html if approved
                     } else {
                         alert("Incorrect password. Please try again.");
                     }
