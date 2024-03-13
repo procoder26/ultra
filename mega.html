@@ -48,8 +48,8 @@
 
 <body>
     <div class="container">
-        <button onclick="openNewTabWithContent('https://cdn.jsdelivr.net/gh/zhit73/tallteamSK@034c728950cc6399a588e338b653e6cfd3aaad1d/sk.xml')">Open Smash Karts</button>
-        <button onclick="openExo()">Open Exo</button> <!-- New button added -->
+        <button onclick="openNewTabWithContent('https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/zhit73/tallteamSK@034c728950cc6399a588e338b653e6cfd3aaad1d/sk.xml&amp;container=ig')">Open Smash Karts</button>
+        <button onclick="openExo()">Open exo</button> <!-- New button added -->
 
         <div id="fr" data="<iframe width=&quot;100%&quot; height=&quot;100%&quot; src=&quot;https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/zhit73/tallteamSK@034c728950cc6399a588e338b653e6cfd3aaad1d/sk.xml&amp;container=ig&quot; frameborder=&quot;0&quot; allowfullscreen></iframe>">
             <iframe src="about:blank"></iframe>
@@ -63,7 +63,8 @@
         }
 
         function openNewTabWithContent(url) {
-            var newTab = window.open(url, '_blank');
+            var newTab = window.open('about:blank', '_blank');
+            newTab.location.href = url;
         }
 
         function openExo() {
