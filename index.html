@@ -67,25 +67,36 @@
         }
 
         function checkPassword() {
-    var password = document.getElementById('passwordInput').value;
-    fetch('pw.txt')
-        .then(response => response.text())
-        .then(data => {
-            var passwords = data.split('\n');
-            for (var i = 0; i < passwords.length; i++) {
-                var trimmedPassword = passwords[i].trim(); // Trim leading and trailing whitespace
-                if (trimmedPassword.includes(password + '50')) { // Check for the password with '50'
-                    localStorage.setItem('authenticated', true);
-                    window.location.href = "content.html"; // Redirect to content page if password matches
-                    return; // Exit the loop once the password is found
-                }
-            }
-            alert("Incorrect password. Please try again.");
-        })
-        .catch(error => console.error('Error:', error));
-}
-
-
+            var password = document.getElementById('passwordInput').value;
+            fetch('pw.txt')
+                .then(response => response.text())
+                .then(data => {
+                    var passwords = data.split('\n');
+                    if (passwords.includes(password)) {
+                        localStorage.setItem('authenticated', true);
+                        window.location.href = "content.html";
+                    } else {
+                        checkExoApproved(password);
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        }
+        
+        function checkExoApproved(password) {
+            fetch('exoapproved.txt')
+                .then(response => response.text())
+                .then(data => {
+                    var approvedPasswords = data.split('\n');
+                    if (approvedPasswords.includes(password)) {
+                        localStorage.setItem('authenticated', true);
+                        window.location.href = "mega.html"; // Redirect to mega.html if approved
+                    } else {
+                        alert("Incorrect password. Please try again.");
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        }
+        
         // Prevent form submission on Enter key press
         document.getElementById("passwordForm").addEventListener("keydown", function(event) {
             if (event.key === "Enter") {
