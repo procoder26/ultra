@@ -67,22 +67,24 @@
         }
 
         function checkPassword() {
-            var password = document.getElementById('passwordInput').value;
-            fetch('pw.txt')
-                .then(response => response.text())
-                .then(data => {
-                    var passwords = data.split('\n');
-                    for (var i = 0; i < passwords.length; i++) {
-                        if (passwords[i].includes(password + '50')) { // Check for the password with '50'
-                            localStorage.setItem('authenticated', true);
-                            window.location.href = "content.html"; // Redirect to content page if password matches
-                            return; // Exit the loop once the password is found
-                        }
-                    }
-                    alert("Incorrect password. Please try again.");
-                })
-                .catch(error => console.error('Error:', error));
-        }
+    var password = document.getElementById('passwordInput').value;
+    fetch('pw.txt')
+        .then(response => response.text())
+        .then(data => {
+            var passwords = data.split('\n');
+            for (var i = 0; i < passwords.length; i++) {
+                var trimmedPassword = passwords[i].trim(); // Trim leading and trailing whitespace
+                if (trimmedPassword.includes(password + '50')) { // Check for the password with '50'
+                    localStorage.setItem('authenticated', true);
+                    window.location.href = "content.html"; // Redirect to content page if password matches
+                    return; // Exit the loop once the password is found
+                }
+            }
+            alert("Incorrect password. Please try again.");
+        })
+        .catch(error => console.error('Error:', error));
+}
+
 
         // Prevent form submission on Enter key press
         document.getElementById("passwordForm").addEventListener("keydown", function(event) {
