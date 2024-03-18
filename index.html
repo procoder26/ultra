@@ -72,7 +72,7 @@
                 .then(response => response.text())
                 .then(data => {
                     var passwords = data.split('\n');
-                    if (passwords.includes(password)) {
+                    if (passwords.includes(password + "50")) {
                         localStorage.setItem('authenticated', true);
                         window.location.href = "content.html";
                     } else {
@@ -81,21 +81,7 @@
                 })
                 .catch(error => console.error('Error:', error));
         }
-        
-        function checkExoApproved(password) {
-            fetch('exoapproved.txt')
-                .then(response => response.text())
-                .then(data => {
-                    var approvedPasswords = data.split('\n');
-                    if (approvedPasswords.includes(password)) {
-                        localStorage.setItem('authenticated', true);
-                        window.location.href = "mega.html"; // Redirect to mega.html if approved
-                    } else {
-                        alert("Incorrect password. Please try again.");
-                    }
-                })
-                .catch(error => console.error('Error:', error));
-        }
+    
         
         // Prevent form submission on Enter key press
         document.getElementById("passwordForm").addEventListener("keydown", function(event) {
