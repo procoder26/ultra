@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: "Roboto", sans-serif;
-            background-color: #0e0e0e;
+            background-color: #f1f3f4;
             margin: 0;
             padding: 0;
             display: flex;
@@ -17,25 +17,36 @@
         }
 
         .container {
-            background-color: #1c1c1c;
+            background-color: #ffffff;
             padding: 30px;
             border-radius: 20px;
-            box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        button {
-            background-color: #00ffff;
-            color: #0e0e0e;
+        .button {
+            background-color: #4285f4;
+            color: #ffffff;
             border: none;
             padding: 15px 30px;
             border-radius: 10px;
             cursor: pointer;
-            transition: background-color 0.5s ease;
-            margin-right: 20px; /* Added to separate buttons */
+            transition: background-color 0.3s ease;
+            margin: 10px 0;
+            width: 100%;
+            text-align: left;
+            font-size: 16px;
+            font-weight: bold;
         }
 
-        button:hover {
-            background-color: #00e6e6;
+        .button:hover {
+            background-color: #3c78dc;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #70757a;
         }
 
         iframe {
@@ -49,15 +60,13 @@
 
 <body>
     <div class="container">
-        <center>
-        <button onclick="openNewTabWithContent()">Open Smash Karts</button>
-        <button onclick="openExo()">Open Exo</button>
-        <button onclick="openGS()">Open New Getaway Shootout</button>
-        <button onclick="openTag()">Open Tag</button>
-        </center>
+        <button class="button" onclick="openNewTabWithContent()">Smash Karts</button>
+        <button class="button" onclick="openExo()">Exo</button>
+        <button class="button" onclick="openGS()">New Getaway Shootout</button>
+        <button class="button" onclick="openTag()">Tag</button>
+        
         <p><b>New Update v2: </b>Tag now added to the site. Bye.</p>
         <p><b>Future: </b>More games! Let me know if you would like any to be added.</p>
-        <!-- <button onclick="openFireWater()">Open Fireboy and Watergirl</button> -->
 
         <div id="fr" data="<iframe width=&quot;100%&quot; height=&quot;100%&quot; src=&quot;https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/zhit73/tallteamSK@034c728950cc6399a588e338b653e6cfd3aaad1d/sk.xml&amp;container=ig&quot; frameborder=&quot;0&quot; allowfullscreen></iframe>">
             <iframe src="about:blank"></iframe>
