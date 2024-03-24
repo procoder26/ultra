@@ -4,51 +4,73 @@
 <head>
     <base target="_blank">
     <title>Mega Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
     <style>
         body {
             font-family: "Roboto", sans-serif;
-            background-color: #f1f3f4;
+            background-color: #f9f9f9;
             margin: 0;
             padding: 0;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
             background-color: #ffffff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .class {
+            width: 300px;
+            margin: 20px;
             background-color: #ffffff;
             padding: 20px;
-            margin-bottom: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .class h2 {
             margin-top: 0;
-            color: #333333;
+            color: #202124;
+            font-size: 24px;
         }
 
         .class p {
-            color: #666666;
+            color: #5f6368;
+            font-size: 16px;
+        }
+
+        .button {
+            background-color: #1a73e8;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0d47a1;
         }
 
         .footer {
-            background-color: #f1f3f4;
+            width: 100%;
+            background-color: #f9f9f9;
             padding: 20px;
-            border-top: 1px solid #dddddd;
             text-align: center;
+            border-top: 1px solid #dddddd;
             border-bottom-left-radius: 8px;
             border-bottom-right-radius: 8px;
         }
 
         .footer p {
-            color: #666666;
+            color: #5f6368;
             font-size: 14px;
         }
     </style>
@@ -60,31 +82,31 @@
         <div class="class">
             <h2>Smash Karts</h2>
             <p>This is where you can play the exciting Smash Karts game!</p>
-            <button onclick="openNewTabWithContent()">Play Smash Karts</button>
+            <button class="button" onclick="openNewTabWithContent()">Play Smash Karts</button>
         </div>
         
         <div class="class">
             <h2>Exo</h2>
             <p>Experience the futuristic world of Exo!</p>
-            <button onclick="openExo()">Play Exo</button>
+            <button class="button" onclick="openExo()">Play Exo</button>
         </div>
 
         <div class="class">
             <h2>New Getaway Shootout</h2>
             <p>Try out the latest version of Getaway Shootout!</p>
-            <button onclick="openGS()">Play New Getaway Shootout</button>
+            <button class="button" onclick="openGS()">Play New Getaway Shootout</button>
         </div>
 
         <div class="class">
             <h2>Tag</h2>
             <p>Play the thrilling game of Tag!</p>
-            <button onclick="openTag()">Play Tag</button>
+            <button class="button" onclick="openTag()">Play Tag</button>
         </div>
+    </div>
 
-        <div class="footer">
-            <p><b>New Update v2: </b>Tag now added to the site. Bye.</p>
-            <p><b>Future: </b>More games! Let me know if you would like any to be added.</p>
-        </div>
+    <div class="footer">
+        <p><b>New Update v2: </b>Tag now added to the site and new theme. Bye.</p>
+        <p><b>Future: </b>More games! Let me know if you would like any to be added.</p>
     </div>
 
     <script>
