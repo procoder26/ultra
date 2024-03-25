@@ -5,48 +5,71 @@
     <title>Password Page</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f6fc;
+            font-family: "Roboto", sans-serif;
+            background-color: #f9f9f9;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
         }
 
         .container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
-        h2 {
-            color: #2f63d4;
+        .class {
+            width: 300px;
+            margin: 20px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .class h2 {
             margin-top: 0;
+            color: #202124;
+            font-size: 24px;
         }
 
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 20px;
+        .class p {
+            color: #5f6368;
+            font-size: 16px;
         }
 
-        button {
-            background-color: #2f63d4;
-            color: #fff;
+        .button {
+            background-color: #1a73e8;
+            color: #ffffff;
             border: none;
             padding: 10px 20px;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
 
-        button:hover {
-            background-color: #4e8ef7;
+        .button:hover {
+            background-color: #0d47a1;
+        }
+
+        .footer {
+            width: 100%;
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #dddddd;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        .footer p {
+            color: #5f6368;
+            font-size: 14px;
         }
     </style>
 </head>
