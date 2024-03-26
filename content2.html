@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_blank">
+    <title>Mega Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .class {
+            width: 300px;
+            margin: 20px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .class h2 {
+            margin-top: 0;
+            color: #202124;
+            font-size: 24px;
+        }
+
+        .class p {
+            color: #5f6368;
+            font-size: 16px;
+        }
+
+        .button {
+            background-color: #1a73e8;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0d47a1;
+        }
+
+        .footer {
+            width: 100%;
+            background-color: #f9f9f9;
+            padding: 10px;
+            text-align: center;
+            border-top: 1px solid #dddddd;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        .footer p {
+            color: #5f6368;
+            font-size: 14px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="class">
+            <h2>Smash Karts</h2>
+            <p>This is where you can play the exciting Smash Karts game!</p>
+            <button class="button" onclick="openNewTabWithContent()">Play Smash Karts</button>
+        </div>
+        
+        <div class="class">
+            <h2>Exo</h2>
+            <p>Experience the futuristic world of Exo!</p>
+            <button class="button" onclick="openExo()">Play Exo</button>
+        </div>
+
+        <div class="class">
+            <h2>New Getaway Shootout</h2>
+            <p>Try out the latest version of Getaway Shootout!</p>
+            <button class="button" onclick="openGS()">Play New Getaway Shootout</button>
+        </div>
+
+        <div class="class">
+            <h2>Tag</h2>
+            <p>Play the thrilling game of Tag!</p>
+            <button class="button" onclick="openTag()">Play Tag</button>
+        </div>
+    </div>
+    <br>
+  <h1>Fireboy And Watergirl</h1>
+  <div class="class">
+            <h2>Fireboy and Watergirl 1</h2>
+            <p>Forest Temple</p>
+            <button class="button" onclick="openFB1()">Fireboy and Watergirl 1</button>
+        </div>
+    <div class="footer">
+        <p><b>New Update v2: </b>Tag now added to the site and new theme. Bye.</p>
+        <p><b>Future: </b>All (hopefully) Fireboy and Watergirl.</p>
+    </div>
+
+    <script>
+        function openNewTabWithContent() {
+            var newTab = window.open('about:blank', '_blank');
+            var content = '<iframe width="100%" height="100%" src="https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/zhit73/tallteamSK@034c728950cc6399a588e338b653e6cfd3aaad1d/sk.xml&amp;container=ig" frameborder="0" allowfullscreen></iframe>';
+            newTab.document.write(content);
+            newTab.document.close();
+        }
+
+        function openExo() {
+            var newTab = window.open('about:blank', '_blank');
+            newTab.document.write('<iframe src="exo.html" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
+            newTab.document.close();
+        }
+        function openGS() {
+            var newTab = window.open('about:blank', '_blank');
+            newTab.document.write('<iframe src="https://procoder26.github.io/gs/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
+            newTab.document.close();
+        }
+        function openTag() {
+            var newTab = window.open('about:blank', '_blank');
+            newTab.document.write('<iframe src="tag.html" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
+            newTab.document.close();
+        }
+      function openFB1() {
+            var newTab = window.open('about:blank', '_blank');
+            var content = '<iframe src="https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/f107b843-3661-4036-9397-2b0c6414a369%2Ffireboy-and-watergirl.xml&amp;container=ig" style="border: none; width: 100%; height: 100%; margin: 0px;"></iframe>';
+            newTab.document.write(content);
+            newTab.document.close();
+        }
+    </script>
+</body>
+
+</html>
