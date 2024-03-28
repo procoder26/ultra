@@ -145,34 +145,38 @@
     
 
     <script>
-        function openSK() {
-            var newTab = window.open('about:blank', '_blank');
-            newTab.document.write('<iframe src="https://procoder26.github.io/karts/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
-            newTab.document.close();
-        }
+    function openSK() {
+        var newTab = window.open('about:blank', '_blank');
+        newTab.document.write('<style>body { margin: 0; }</style><iframe src="https://procoder26.github.io/karts/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
+        newTab.document.close();
+    }
 
-        function openExo() {
-            var newTab = window.open('about:blank', '_blank');
-            newTab.document.write('<iframe src="exo.html" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
-            newTab.document.close();
-        }
-        function openGS() {
-            var newTab = window.open('about:blank', '_blank');
-            newTab.document.write('<iframe src="https://procoder26.github.io/gs/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
-            newTab.document.close();
-        }
-        function openTag() {
-            var newTab = window.open('about:blank', '_blank');
-            newTab.document.write('<iframe src="tag.html" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
-            newTab.document.close();
-        }
-      function openFB(a) {
-            var newTab = window.open('about:blank', '_blank');
-            var content = a;
-            newTab.document.write(content);
-            newTab.document.close();
-        }
-    </script>
+    function openExo() {
+        var newTab = window.open('about:blank', '_blank');
+        newTab.document.write('<style>body { margin: 0; }</style><iframe src="exo.html" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
+        newTab.document.close();
+    }
+
+    function openGS() {
+        var newTab = window.open('about:blank', '_blank');
+        newTab.document.write('<style>body { margin: 0; }</style><iframe src="https://procoder26.github.io/gs/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
+        newTab.document.close();
+    }
+
+    function openTag() {
+        var newTab = window.open('about:blank', '_blank');
+        newTab.document.write('<style>body { margin: 0; }</style><iframe src="tag.html" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
+        newTab.document.close();
+    }
+
+    function openFB(a) {
+        var newTab = window.open('about:blank', '_blank');
+        var content = '<style>body { margin: 0; }</style>' + a;
+        newTab.document.write(content);
+        newTab.document.close();
+    }
+</script>
+
 </body>
 
 </html>
