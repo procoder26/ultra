@@ -83,12 +83,14 @@
 </head>
 
 <body>
-    <h1><center><em>The Proxy</center></em></h1>
+    <h1><center>Welcome!</center></h1>
     <div class="container">
+        <div class="class">
             <h2>The Proxy</h2>
-            <p>Play the exhilarating game of Smash Karts with new maps!</p>
-            <button class="button" onclick="openSK()">Play Smash Karts</button>
+            <p>Access Any Site You Want!</p>
+            <button class="button" onclick="openProxy()">Open the Proxy</button>
         </div>
+    </div>
     <h1><center>All Games</center></h1>
     <div class="container">
         <div class="class">
@@ -184,6 +186,11 @@
         var newTab = window.open('about:blank', '_blank');
         var content = '<style>body { margin: 0; }</style>' + a;
         newTab.document.write(content);
+        newTab.document.close();
+    }
+    function openProxy() {
+        var newTab = window.open('about:blank', '_blank');
+        newTab.document.write('<style>body { margin: 0; }</style><iframe src="https://lunarlearningcenter.space/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
         newTab.document.close();
     }
 </script>
