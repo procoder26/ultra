@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Password Page</title>
+    <title>Site Down.</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
     <style>
         body {
@@ -69,6 +69,13 @@
             color: #5f6368;
             font-size: 14px;
         }
+
+        /* Disabling cursor change and underline for the unfortunately link */
+        .discrete-link {
+            text-decoration: none;
+            color: inherit;
+            cursor: default !important;
+        }
     </style>
 </head>
 
@@ -81,10 +88,15 @@
         </form>
     </div>
 
+    <div class="footer">
+        <!-- Making "unfortunately" clickable but discrete -->
+        <p> <a href="security.html" class="discrete-link">Unfortunately</a>, this site is no longer active.</p>
+    </div>
+
     <script>
         // Check if the user is already authenticated
-        if (localStorage.getItem('authenticated')) {
-            window.location.href = "content.html"; // Redirect to content page if already authenticated
+        if (localStorage.getItem('auth')) {
+            localStorage.removeItem('auth'); // Remove the old auth key to enforce re-login
         }
 
         function checkPassword() {
@@ -94,23 +106,8 @@
                 .then(data => {
                     var passwords = data.split('\n');
                     if (passwords.includes(password)) {
-                        localStorage.setItem('authenticated', true);
+                        localStorage.setItem('auth', true); // Set the new auth key
                         window.location.href = "content.html";
-                    } else {
-                        checkExoApproved(password);
-                    }
-                })
-                .catch(error => console.error('Error:', error));
-        }
-        
-        function checkExoApproved(password) {
-            fetch('exoapproved.txt')
-                .then(response => response.text())
-                .then(data => {
-                    var approvedPasswords = data.split('\n');
-                    if (approvedPasswords.includes(password)) {
-                        localStorage.setItem('authenticated', true);
-                        window.location.href = "mega.html"; // Redirect to mega.html if approved
                     } else {
                         alert("Incorrect password. Please try again.");
                     }
