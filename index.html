@@ -3,74 +3,7 @@
 
 <head>
     <title>Site Down.</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
     <style>
-        body {
-            font-family: "Roboto", sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 400px;
-            margin: 100px auto;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            margin-top: 0;
-            color: #202124;
-            font-size: 24px;
-            text-align: center;
-        }
-
-        form {
-            text-align: center;
-        }
-
-        input[type="password"] {
-            width: 100%;
-            margin-bottom: 20px;
-            padding: 10px;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-            box-sizing: border-box;
-        }
-
-        .button {
-            background-color: #1a73e8;
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #0d47a1;
-        }
-
-        .footer {
-            width: 100%;
-            background-color: #f9f9f9;
-            padding: 20px;
-            text-align: center;
-            border-top: 1px solid #dddddd;
-            border-bottom-left-radius: 8px;
-            border-bottom-right-radius: 8px;
-        }
-
-        .footer p {
-            color: #5f6368;
-            font-size: 14px;
-        }
-
-        /* Disabling cursor change and underline for the unfortunately link */
         .discrete-link {
             text-decoration: none;
             color: inherit;
@@ -80,48 +13,13 @@
 </head>
 
 <body>
-    <div class="container">
-        <h2>Enter Password</h2>
-        <form id="passwordForm">
-            <input type="password" id="passwordInput" placeholder="Enter password">
-            <button class="button" type="button" onclick="checkPassword()">Submit</button>
-        </form>
-    </div>
-
-    <div class="footer">
-        <!-- Making "unfortunately" clickable but discrete -->
-        <p> <a href="security.html" class="discrete-link">Unfortunately</a>, this site is no longer active.</p>
+    <div>
+        <p><a href="security.html" class="discrete-link">Unfortunately</a>, this site is no longer active.</p>
     </div>
 
     <script>
-        // Check if the user is already authenticated
-        if (localStorage.getItem('auth')) {
-            localStorage.removeItem('auth'); // Remove the old auth key to enforce re-login
-        }
-
-        function checkPassword() {
-            var password = document.getElementById('passwordInput').value;
-            fetch('pw.txt')
-                .then(response => response.text())
-                .then(data => {
-                    var passwords = data.split('\n');
-                    if (passwords.includes(password)) {
-                        localStorage.setItem('auth', true); // Set the new auth key
-                        window.location.href = "content.html";
-                    } else {
-                        alert("Incorrect password. Please try again.");
-                    }
-                })
-                .catch(error => console.error('Error:', error));
-        }
-        
-        // Prevent form submission on Enter key press
-        document.getElementById("passwordForm").addEventListener("keydown", function(event) {
-            if (event.key === "Enter") {
-                event.preventDefault();
-                checkPassword();
-            }
-        });
+        // Redirect to the security page
+        // window.location.href = "security.html"; // Uncomment this line if you want an immediate redirect
     </script>
 </body>
 
