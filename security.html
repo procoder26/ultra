@@ -22,7 +22,9 @@
                 .then(data => {
                     var passwords = data.split('\n');
                     if (passwords.includes(password)) {
-                        localStorage.setItem('auth', true);
+                        // Store authentication status in local storage
+                        localStorage.setItem('auth', 'true');
+                        // Redirect to content page
                         window.location.href = "content.html";
                     } else {
                         alert("Incorrect password. Please try again.");
@@ -30,7 +32,15 @@
                 })
                 .catch(error => console.error('Error:', error));
         }
-        
+
+        // Check if user is already authenticated
+        window.onload = function() {
+            if (localStorage.getItem('auth')) {
+                // If user is authenticated, redirect to content page
+                window.location.href = "content.html";
+            }
+        }
+
         // Prevent form submission on Enter key press
         document.getElementById("passwordForm").addEventListener("keydown", function(event) {
             if (event.key === "Enter") {
