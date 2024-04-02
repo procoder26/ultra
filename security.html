@@ -83,39 +83,20 @@
 
     <script>
         // Check if the user is already authenticated
-        if (localStorage.getItem('authenticated')) {
+        if (localStorage.getItem('auth')) {
             window.location.href = "content.html"; // Redirect to content page if already authenticated
         }
 
         function checkPassword() {
             var password = document.getElementById('passwordInput').value;
-            fetch('pw.txt')
-                .then(response => response.text())
-                .then(data => {
-                    var passwords = data.split('\n');
-                    if (passwords.includes(password)) {
-                        localStorage.setItem('authenticated', true);
-                        window.location.href = "content.html";
-                    } else {
-                        checkExoApproved(password);
-                    }
-                })
-                .catch(error => console.error('Error:', error));
-        }
-        
-        function checkExoApproved(password) {
-            fetch('exoapproved.txt')
-                .then(response => response.text())
-                .then(data => {
-                    var approvedPasswords = data.split('\n');
-                    if (approvedPasswords.includes(password)) {
-                        localStorage.setItem('authenticated', true);
-                        window.location.href = "mega.html"; // Redirect to mega.html if approved
-                    } else {
-                        alert("Incorrect password. Please try again.");
-                    }
-                })
-                .catch(error => console.error('Error:', error));
+            // Here you can perform your password validation logic
+            // For demonstration, I'll just set auth to true if the password is "password"
+            if (password === "password") {
+                localStorage.setItem('auth', true);
+                window.location.href = "content.html";
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
         }
         
         // Prevent form submission on Enter key press
