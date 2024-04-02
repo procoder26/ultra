@@ -2,16 +2,15 @@
 <html>
 
 <head>
-    <base target="_blank">
-    <title>Mega Page</title>
+    <title>Content Page</title>
     <style>
         body {
             font-family: 'Google Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/googlesans/v27/4UaGrENHsxJlGDuGo1OIlL3Kwp5MKg.woff2) format('woff2');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/googlesans/v27/4UaGrENHsxJlGDuGo1OIlL3Kwp5MKg.woff2) format('woff2');
+            unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
             background-color: #f9f9f9;
             margin: 0;
             padding: 0;
@@ -29,7 +28,7 @@
             justify-content: center;
         }
 
-        .class {
+        .game {
             width: 300px;
             margin: 20px;
             background-color: #ffffff;
@@ -38,13 +37,13 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        .class h2 {
+        .game h2 {
             margin-top: 0;
             color: #202124;
             font-size: 24px;
         }
 
-        .class p {
+        .game p {
             color: #5f6368;
             font-size: 16px;
         }
@@ -78,137 +77,131 @@
             font-size: 14px;
         }
     </style>
-
 </head>
 
 <body>
     <h1><b><center>Welcome!</center></b></h1>
-    <!--
-    <div class="container">
-        <div class="class">
-            <h2>The Proxy</h2>
-            <p>Access Any Site You Want!</p>
-            <button class="button" onclick="openProxy()">Open the Proxy</button>
-        </div>
-    </div>
-    -->
+
     <h1><center>All Games</center></h1>
     <div class="container">
-        <div class="class">
+        <div class="game">
             <h2>Smash Karts</h2>
             <p>Play the exhilarating game of Smash Karts with new maps!</p>
             <button class="button" onclick="openSK()">Play Smash Karts</button>
         </div>
         
-        <div class="class">
+        <div class="game">
             <h2>Exo</h2>
             <p>Experience the futuristic world of Exo!</p>
             <button class="button" onclick="openExo()">Play Exo</button>
         </div>
 
-        <div class="class">
+        <div class="game">
             <h2>New Getaway Shootout</h2>
             <p>Try out the latest version of Getaway Shootout!</p>
             <button class="button" onclick="openGS()">Play New Getaway Shootout</button>
         </div>
 
-        <div class="class">
+        <div class="game">
             <h2>Tag</h2>
             <p>Play the thrilling game of Tag!</p>
             <button class="button" onclick="openTag()">Play Tag</button>
         </div>
-        <div class="class">
+        
+        <div class="game">
             <h2>Retro Bowl</h2>
             <p>Football? I don't even know...</p>
             <button class="button" onclick="openRB()">Play Retro Bowl</button>
         </div>
     </div>
-  <h1><center>Fireboy And Watergirl</center></h1>
+    
+    <h1><center>Fireboy And Watergirl</center></h1>
     <div class="container">
-  <div class="class">
+        <div class="game">
             <h2>Fireboy and Watergirl 1</h2>
             <p>Forest Temple</p>
             <button class="button" onclick="openFB('<iframe src=&quot;https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/f107b843-3661-4036-9397-2b0c6414a369%2Ffireboy-and-watergirl.xml&amp;container=ig&quot; style=&quot;border: none; width: 100%; height: 100%; margin: 0px;&quot;></iframe>')">Play Fireboy and Watergirl 1</button>
         </div>
-        <div class="class">
+        
+        <div class="game">
             <h2>Fireboy and Watergirl 2</h2>
             <p>Light Temple</p>
             <button class="button" onclick="openFB('<iframe src=&quot;https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bobydob/godotpack@d32e9e4a86906c370853af8c5d3276a7606b4d9a/side/faw2/faw2.xml&amp;container=ig&quot; style=&quot;border: none; width: 100%; height: 100%; margin: 0px;&quot;></iframe>')">Play Fireboy and Watergirl 2</button>
         </div>
-        <div class="class">
+        
+        <div class="game">
             <h2>Fireboy and Watergirl 3</h2>
             <p>Ice Temple</p>
             <button class="button" onclick="openFB('<iframe src=&quot;https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/bobydob/godotpack@a0ddbbb0c03372e2dd4672521de0ec105d6d6085/side/faw3/faw3.xml&amp;container=ig&quot; style=&quot;border: none; width: 100%; height: 100%; margin: 0px;&quot;></iframe>')">Play Fireboy and Watergirl 3</button>
         </div>
-        <div class="class">
+        
+        <div class="game">
             <h2>Fireboy and Watergirl 4</h2>
             <p>It Was Being Annoying</p>
         </div>
-        <div class="class">
+        
+        <div class="game">
             <h2>Fireboy and Watergirl 5</h2>
             <p>Elements</p>
             <button class="button" onclick="openFB('<iframe src=&quot;https://script.google.com/macros/s/AKfycbyJNOLNn5Ls2FUk3P-yVVB0pztdV0Ln-9Y63pMkV8_EehcgTlZ79f4xnOWRW2OgVlmn/exec&quot; style=&quot;border: none; width: 100%; height: 100%; margin: 0px;&quot;></iframe>')">Play Fireboy and Watergirl 5</button>
         </div>
-        <div class="class">
+        
+        <div class="game">
             <h2>Fireboy and Watergirl 6</h2>
             <p>Fairy Tales</p>
             <button class="button" onclick="openFB('<iframe src=&quot;https://script.google.com/macros/s/AKfycbwYTN-M6FpARuAcCZUAcosjE2KlpUlBaK0ckikqh8A8RdlLTTNuSwk-NSFF6Vq4-D2opA/exec&quot; style=&quot;border: none; width: 100%; height: 100%; margin: 0px;&quot;></iframe>')">Play Fireboy and Watergirl 6</button>
+        </div>
+    </div>
 
-        </div>
-        </div>
     <div class="footer">
         <p><b>New Update v3: </b>New maps in Smash Karts.</p>
         <p><b>Future: </b>New Games! LMK if you want any. <em>NO POKEMON!</em></p>
         <p><em>All games are from outside sources. I made none.</em></p>
     </div>
-    
 
     <script>
-    function openSK() {
-        var newTab = window.open('about:blank', '_blank');
-        newTab.document.write('<style>body { margin: 0; }</style><iframe src="https://procoder26.github.io/karts/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
-        newTab.document.close();
-    }
+        function openSK() {
+            var newTab = window.open('about:blank', '_blank');
+            newTab.document.write('<style>body { margin: 0; }</style><iframe src="https://procoder26.github.io/karts/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
+            newTab.document.close();
+        }
 
-    function openExo() {
-        var newTab = window.open('about:blank', '_blank');
-        newTab.document.write('<style>body { margin: 0; }</style><iframe src="exo.html" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
-        newTab.document.close();
-    }
+        function openExo() {
+            var newTab = window.open('about:blank', '_blank');
+            newTab.document.write('<style>body { margin: 0; }</style><iframe src="exo.html" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
+            newTab.document.close();
+        }
 
-    function openGS() {
-        var newTab = window.open('about:blank', '_blank');
-        newTab.document.write('<style>body { margin: 0; }</style><iframe src="https://procoder26.github.io/gs/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
-        newTab.document.close();
-    }
+        function openGS() {
+            var newTab = window.open('about:blank', '_blank');
+            newTab.document.write('<style>body { margin: 0; }</style><iframe src="https://procoder26.github.io/gs/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
+            newTab.document.close();
+        }
 
-    function openTag() {
-        var newTab = window.open('about:blank', '_blank');
-        newTab.document.write('<style>body { margin: 0; }</style><iframe src="tag.html" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
-        newTab.document.close();
-    }
+        function openTag() {
+            var newTab = window.open('about:blank', '_blank');
+            newTab.document.write('<style>body { margin: 0; }</style><iframe src="tag.html" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
+            newTab.document.close();
+        }
 
-    function openFB(a) {
-        var newTab = window.open('about:blank', '_blank');
-        var content = '<style>body { margin: 0; }</style>' + a;
-        newTab.document.write(content);
-        newTab.document.close();
-    }
-    function openProxy() {
-        var newTab = window.open('about:blank', '_blank');
-        newTab.document.write('<style>body { margin: 0; }</style><iframe src="https://lunarlearningcenter.space/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
-        newTab.document.close();
-    }
+        function openFB(a) {
+            var newTab = window.open('about:blank', '_blank');
+            var content = '<style>body { margin: 0; }</style>' + a;
+            newTab.document.write(content);
+            newTab.document.close();
+        }
+
         function openRB() {
-        var newTab = window.open('about:blank', '_blank');
-        newTab.document.write('<style>body { margin: 0; }</style><iframe src="https://22fb0ea7-e512-4cc4-83a9-54895688e8be-00-1yu2teieingmn.riker.replit.dev/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
-        newTab.document.close();
-    }
+            var newTab = window.open('about:blank', '_blank');
+            newTab.document.write('<style>body { margin: 0; }</style><iframe src="https://22fb0ea7-e512-4cc4-83a9-54895688e8be-00-1yu2teieingmn.riker.replit.dev/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
+            newTab.document.close();
+        }
+        
+        // If not authenticated, redirect to the security page
         if (!localStorage.getItem('auth')) {
-            // If not authenticated, redirect to the security page
             window.location.href = "security.html";
         }
-</script>
+    </script>
 
 </body>
 
