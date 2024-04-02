@@ -204,6 +204,10 @@
         newTab.document.write('<style>body { margin: 0; }</style><iframe src="https://22fb0ea7-e512-4cc4-83a9-54895688e8be-00-1yu2teieingmn.riker.replit.dev/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
         newTab.document.close();
     }
+        if (!localStorage.getItem('auth')) {
+            // If not authenticated, redirect to the security page
+            window.location.href = "security.html";
+        }
 </script>
 
 </body>
