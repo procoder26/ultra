@@ -83,6 +83,14 @@
     <h1><b><center>Welcome!</center></b></h1>
 
     <h1><center>All Games</center></h1>
+    <h1><center>The Proxy</center></h1>
+    <div class="container">
+        <div class="game">
+            <h2>The Proxy</h2>
+            <p>No comment.</p>
+            <button class="button" onclick="openProxy()">Open the Proxy</button>
+        </div>
+        
     <div class="container">
         <div class="game">
             <h2>Smash Karts</h2>
@@ -194,6 +202,11 @@
         function openRB() {
             var newTab = window.open('about:blank', '_blank');
             newTab.document.write('<style>body { margin: 0; }</style><iframe src="https://procoder26.github.io/retrobowl/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
+            newTab.document.close();
+        }
+        function openProxy() {
+            var newTab = window.open('about:blank', '_blank');
+            newTab.document.write('<style>body { margin: 0; }</style><iframe src="https://vortexvista.space/proxy" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
             newTab.document.close();
         }
         
