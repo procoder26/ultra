@@ -168,7 +168,7 @@
         <div class="game">
             <h2>Pokémon Emerald</h2>
             <p>Description TBD</p>
-            <button class="button" onclick="openPoke("poke/emerald.html")">Play Pokémon Emerald</button>        
+            <button class="button" onclick="openPoke()">Play Pokémon Emerald</button>   
         </div>
     </div>
 
@@ -209,10 +209,9 @@
             newTab.document.write(content);
             newTab.document.close();
         }
-        function openPoke(b) {
+        function openPoke() {
             var newTab = window.open('about:blank', '_blank');
-            var content = '<style>body { margin: 0; }</style>' + b;
-            newTab.document.write(content);
+            newTab.document.write('<style>body { margin: 0; }</style><iframe src="poke/emerald.html" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
             newTab.document.close();
         }
 
