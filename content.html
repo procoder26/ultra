@@ -210,13 +210,12 @@
             newTab.document.close();
         }
 
-function openRetro(url) {
-    var newTab = window.open(url, '_blank');
-    newTab.document.write('<style>body { margin: 0; }</style>');
-    newTab.document.write('<div>This is custom content that you can add.</div>');
+function openRetro(a) {
+    var newTab = window.open('about:blank', '_blank');
+    var content = '<style>body { margin: 0; }</style>' + a;
+    newTab.document.write(content);
     newTab.document.close();
 }
-</script>
 
         function openRB() {
             var newTab = window.open('about:blank', '_blank');
