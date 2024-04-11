@@ -205,17 +205,15 @@
 
         function openFB(a) {
             var newTab = window.open('about:blank', '_blank');
-            var content = '<style>body { margin: 0; }</style>' + a;
+            var content = '<style>body { margin: 0; }</style>' + a ;
             newTab.document.write(content);
             newTab.document.close();
         }
 
 function openRetro(a) {
-    var newTab = window.open('about:blank', '_blank');
-    var content = '<style>body { margin: 0; }</style>' + a;
-    newTab.document.write(content);
-    newTab.document.close();
-}
+            var newTab = window.open('about:blank', '_blank');
+            newTab.document.write('<style>body { margin: 0; }</style><iframe src='+a+'width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
+            newTab.document.close();
 
         function openRB() {
             var newTab = window.open('about:blank', '_blank');
