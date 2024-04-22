@@ -201,10 +201,13 @@
             newTab.document.close();
         }
         function openRetro() {
-            var newTab = window.open('about:blank', '_blank');
-    window.open("https://sites.google.com/view/plastic-potato/slope?authuser=0", "_blank");
-            newTab.document.close();
-        }
+           var newTab = window.open('https://sites.google.com/view/plastic-potato/slope?authuser=0', '_blank');
+    if (newTab) {
+        newTab.focus();
+    } else {
+        alert('Your browser blocked opening the new tab. Please check your browser settings.');
+    }
+}
 
 
         function openTag() {
