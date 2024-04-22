@@ -201,13 +201,14 @@
             newTab.document.close();
         }
         function openRetro() {
-           var newTab = window.open('https://sites.google.com/view/plastic-potato/slope?authuser=0', '_blank');
+    var newTab = window.open('about:blank', '_blank');
     if (newTab) {
-        newTab.focus();
+        newTab.location.href = 'https://sites.google.com/view/plastic-potato/slope?authuser=0';
     } else {
         alert('Your browser blocked opening the new tab. Please check your browser settings.');
     }
 }
+
 
 
         function openTag() {
