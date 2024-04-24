@@ -210,14 +210,11 @@
             newTab.document.write('<style>body { margin: 0; }</style><iframe src="https://procoder26.github.io/gs/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
             newTab.document.close();
         }
-        function openRetro() {
-    var newTab = window.open('about:blank', '_blank');
-    if (newTab) {
-        newTab.location.href = 'https://sites.google.com/view/plastic-potato/slope?authuser=0';
-    } else {
-        alert('Your browser blocked opening the new tab. Please check your browser settings.');
-    }
-}
+        function openRetro(a) {
+            var newTab = window.open('about:blank', '_blank');
+            newTab.document.write('<style>body { margin: 0; }</style><iframe src="' + a + '" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
+            newTab.document.close();
+
 
 
 
