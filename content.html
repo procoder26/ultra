@@ -105,10 +105,15 @@
             <p>Try out the latest version of Getaway Shootout!</p>
             <button class="button" onclick="openGS()">Play New Getaway Shootout</button>
         </div>
+        <div class="game">
+            <h2>Minecraft Rules and Tips</h2>
+            <p>Try out the latest version of Getaway Shootout!</p>
+            <button class="button" onclick="mcRules()">Open MC Rules and Tips</button>
+        </div>
 
         <div class="game">
             <h2>Tag</h2>
-            <p>Play the thrilling game of Tag!</p>
+            <p>Rules and Helpful Tips</p>
             <button class="button" onclick="openTag()">Play Tag</button>
         </div>
         
@@ -221,6 +226,11 @@
         function openTag() {
             var newTab = window.open('about:blank', '_blank');
             newTab.document.write('<style>body { margin: 0; }</style><iframe src="tag.html" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
+            newTab.document.close();
+        }
+        function mcRules() {
+            var newTab = window.open('about:blank', '_blank');
+            newTab.document.write('<style>body { margin: 0; }</style><iframe src="mcrules.html" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
             newTab.document.close();
         }
         function openMC() {
