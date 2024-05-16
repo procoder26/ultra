@@ -107,8 +107,12 @@
         </div>
         <div class="game">
             <h2>Minecraft Rules and Tips</h2>
-            <p>Try out the latest version of Getaway Shootout!</p>
             <button class="button" onclick="mcRules()">Open MC Rules and Tips</button>
+        </div>
+        <div class="game">
+            <h2>Pico-8</h2>
+            <p>Play all the games that the Pico-8 has to offer.</p>
+            <button class="button" onclick="pico8()">Open Pico-8</button>
         </div>
 
         <div class="game">
@@ -201,6 +205,11 @@
         function openSK() {
             var newTab = window.open('about:blank', '_blank');
             newTab.document.write('<style>body { margin: 0; }</style><iframe src="https://procoder26.github.io/karts/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
+            newTab.document.close();
+        }
+        function pico8() {
+            var newTab = window.open('about:blank', '_blank');
+            newTab.document.write('<style>body { margin: 0; }</style><iframe jsname="L5Fo6c" class="YMEQtf" sandbox="allow-scripts allow-popups allow-forms allow-same-origin allow-popups-to-escape-sandbox allow-downloads allow-modals allow-storage-access-by-user-activation" frameborder="0" aria-label="Apps Script" src="https://script.google.com/macros/s/AKfycbxOVZK3wbs-BQK-bc9zgzX3eC8X-6r-6hnO-Ye59dQJ1BcOeUsfiVUDKD40oWFzyeaeaw/exec" allowfullscreen=""></iframe>');
             newTab.document.close();
         }
 
