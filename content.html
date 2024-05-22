@@ -114,7 +114,11 @@
             <p>Play all the games that the Pico-8 has to offer.</p>
             <button class="button" onclick="pico8()">Open Pico-8</button>
         </div>
-
+<div class="game">
+            <h2>Avatar Arena</h2>
+            <p>Dylan <em>COULD NOT</em> close his lips about this.</p>
+            <button class="button" onclick="avatarArena()">Open Avatar Arena</button>
+        </div>
         <div class="game">
             <h2>Tag</h2>
             <p>Rules and Helpful Tips</p>
@@ -207,9 +211,15 @@
             newTab.document.write('<style>body { margin: 0; }</style><iframe src="https://procoder26.github.io/karts/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
             newTab.document.close();
         }
+        
         function pico8() {
             var newTab = window.open('about:blank', '_blank');
             newTab.document.write('<style>body, html { margin: 0; height: 100%; }</style><div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"><iframe jsname="L5Fo6c" class="YMEQtf" sandbox="allow-scripts allow-popups allow-forms allow-same-origin allow-popups-to-escape-sandbox allow-downloads allow-modals allow-storage-access-by-user-activation" frameborder="0" aria-label="Apps Script" src="https://script.google.com/macros/s/AKfycbxOVZK3wbs-BQK-bc9zgzX3eC8X-6r-6hnO-Ye59dQJ1BcOeUsfiVUDKD40oWFzyeaeaw/exec" allowfullscreen="" style="width: 100%; height: 100%;"></iframe></div>');
+            newTab.document.close();
+        }
+        function avatarArena() {
+            var newTab = window.open('about:blank', '_blank');
+            newTab.document.write('<style>body, html { margin: 0; height: 100%; }</style><div id="game" style="display: grid;"><iframe width="100%" height="100%" allowfullscreen="allowfullscreen" src="https://incog.nebula.christmas/~/uv/hwtss9%2F%2Cf-kahdanep.%60on%2FQS%2Cgbmf.shs%3Fq%3D%2C%2Fe.hbkgbmfs-clm%2C231%3B%2Fpwe%2Fbvbtbrbrfnb.pwe%26t%3D503%26k%3D003%26taqnpusplrw%3Dwrve" scrolling="no" allow="autoplay" __uv-attr-src="https://f.kbhgames.com/RS/game.php?r=//f.kbhgames.com/2018/swf/avatararena.swf&amp;w=600&amp;h=300&amp;warnsupport=true"></iframe><div id="useful-buttons" style="justify-self:right" __uv-attr-style="justify-self: right;"><span class="wpfp-span"><a class="wpfp-link2" data-toggle="ml-modal" href="#modal-login" title="Add to Favorite" rel="nofollow" __uv-attr-href="#modal-login"><div class="icon icon-heart"></div></a></span><button class="button" style="color:#e7e7e7;background-color:#000000;border:none;cursor:pointer;border-radius:5px;padding:10px 0 0 10px" __uv-attr-style="color: #e7e7e7;background-color: #000000;border: none;cursor: pointer;border-radius: 5px;padding: 10px 0 0 10px;"><div class="icon icon-arrows-alt"></div></button></div></div></div>');
             newTab.document.close();
         }
 
