@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>¿Holá, Cómo Está?</title>
+    <title>Hola, Cómo Está?/title>
     <style>
         body {
             font-family: 'Google Sans';
@@ -15,7 +14,6 @@
             margin: 0;
             padding: 0;
         }
-
         .container {
             max-width: 1200px;
             margin: 20px auto;
@@ -27,7 +25,6 @@
             flex-wrap: wrap;
             justify-content: center;
         }
-
         .game {
             width: 300px;
             margin: 20px;
@@ -36,18 +33,15 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-
         .game h2 {
             margin-top: 0;
             color: #202124;
             font-size: 24px;
         }
-
         .game p {
             color: #5f6368;
             font-size: 16px;
         }
-
         .button {
             background-color: #1a73e8;
             color: #ffffff;
@@ -57,11 +51,9 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-
         .button:hover {
             background-color: #0d47a1;
         }
-
         .footer {
             width: 100%;
             background-color: #f9f9f9;
@@ -71,14 +63,12 @@
             border-bottom-left-radius: 8px;
             border-bottom-right-radius: 8px;
         }
-
         .footer p {
             color: #5f6368;
             font-size: 14px;
         }
     </style>
 </head>
-
 <body>
     <h1><b><center>Welcome!</center></b></h1>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -99,7 +89,6 @@
             <button class="button" onclick="openSK()">Play Smash Karts</button>
         </div>
         
-
         <div class="game">
             <h2>New Getaway Shootout</h2>
             <p>Try out the latest version of Getaway Shootout!</p>
@@ -107,6 +96,7 @@
         </div>
         <div class="game">
             <h2>Minecraft Rules and Tips</h2>
+            <p>Try out the latest version of Getaway Shootout!</p>
             <button class="button" onclick="mcRules()">Open MC Rules and Tips</button>
         </div>
         <div class="game">
@@ -114,11 +104,7 @@
             <p>Play all the games that the Pico-8 has to offer.</p>
             <button class="button" onclick="pico8()">Open Pico-8</button>
         </div>
-            <div class="game">
-            <h2>Avatar Arena</h2>
-            <p>Dylan <em>COULD NOT</em> close his lips about this.</p>
-            <button class="button" onclick="avatarArena()">Open Avatar Arena</button>
-        </div>
+
         <div class="game">
             <h2>Tag</h2>
             <p>Rules and Helpful Tips</p>
@@ -198,49 +184,29 @@
             <button class="button" onclick="openFB('<iframe src=&quot;https://script.google.com/macros/s/AKfycbwYTN-M6FpARuAcCZUAcosjE2KlpUlBaK0ckikqh8A8RdlLTTNuSwk-NSFF6Vq4-D2opA/exec&quot; style=&quot;border: none; width: 100%; height: 100%; margin: 0px;&quot;></iframe>')">Play Fireboy and Watergirl 6</button>
         </div>
     </div>
-
     <div class="footer">
-        <p><em>Game Version: v5</em></p>
+        <p><b>New Update v5: </b>Add Random Pokémon Emerald and Mario Kart Super Circuit.</p>
         <p><b>Future: </b>New Games! LMK if you want any. <em>NO POKÉMON ANOTHER THAN THE ONES ADDED!!</em></p>
-        <p><em>All games are from outside sources. I made none.<br>Security Version: v6</em></p>
+        <p><em>All games are from outside sources. I made none.</em></p>
+        <p><em>Security Version: 6</em></p>
     </div>
-
     <script>
         function openSK() {
             var newTab = window.open('about:blank', '_blank');
             newTab.document.write('<style>body { margin: 0; }</style><iframe src="https://procoder26.github.io/karts/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
             newTab.document.close();
         }
-        
         function pico8() {
             var newTab = window.open('about:blank', '_blank');
-            newTab.document.write('<style>body, html { margin: 0; height: 100%; }</style><div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"><iframe jsname="L5Fo6c" class="YMEQtf" sandbox="allow-scripts allow-popups allow-forms allow-same-origin allow-popups-to-escape-sandbox allow-downloads allow-modals allow-storage-access-by-user-activation" frameborder="0" aria-label="Apps Script" src="https://script.google.com/macros/s/AKfycbxOVZK3wbs-BQK-bc9zgzX3eC8X-6r-6hnO-Ye59dQJ1BcOeUsfiVUDKD40oWFzyeaeaw/exec" allowfullscreen="" style="width: 100%; height: 100%;"></iframe></div>');
+            newTab.document.write('<style>body { margin: 0; }</style><iframe jsname="L5Fo6c" class="YMEQtf" sandbox="allow-scripts allow-popups allow-forms allow-same-origin allow-popups-to-escape-sandbox allow-downloads allow-modals allow-storage-access-by-user-activation" frameborder="0" aria-label="Apps Script" src="https://script.google.com/macros/s/AKfycbxOVZK3wbs-BQK-bc9zgzX3eC8X-6r-6hnO-Ye59dQJ1BcOeUsfiVUDKD40oWFzyeaeaw/exec" allowfullscreen=""></iframe>');
             newTab.document.close();
         }
+
         function openExo() {
             var newTab = window.open('about:blank', '_blank');
             newTab.document.write('<style>body { margin: 0; }</style><iframe src="exo.html" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
             newTab.document.close();
         }
-
-        function openExo() {
-            var newTab = window.open('about:blank', '_blank');
-            newTab.document.write('<style>body, html { margin: 0; height: 100%; }</style><div id="game" style="display: grid; width: 100vw; height: 100vh; margin: 0; padding: 0;">
-    <iframe allowfullscreen="allowfullscreen" src="https://incog.nebula.christmas/~/uv/hwtss9%2F%2Cf-kahdanep.%60on%2FQS%2Cgbmf.shs%3Fq%3D%2C%2Fe.hbkgbmfs-clm%2C231%3B%2Fpwe%2Fbvbtbrbrfnb.pwe%26t%3D503%26k%3D003%26taqnpusplrw%3Dwrve" scrolling="no" allow="autoplay" style="width: 100%; height: 100%; border: none;"></iframe>
-    <div id="useful-buttons" style="justify-self: right;">)
-        <span class="wpfp-span">
-            <a class="wpfp-link2" data-toggle="ml-modal" href="#modal-login" title="Add to Favorite" rel="nofollow">
-                <div class="icon icon-heart"></div>
-            </a>
-        </span>
-        <button class="button" style="color: #e7e7e7; background-color: #000000; border: none; cursor: pointer; border-radius: 5px; padding: 10px;">
-            <div class="icon icon-arrows-alt"></div>
-        </button>
-    </div>
-</div>');
-            newTab.document.close();
-        }
-
         function openGS() {
             var newTab = window.open('about:blank', '_blank');
             newTab.document.write('<style>body { margin: 0; }</style><iframe src="https://procoder26.github.io/gs/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
@@ -251,9 +217,6 @@
             newTab.document.write('<style>body { margin: 0; }</style><iframe src="' + a + '" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
             newTab.document.close();
         }
-
-
-
         function openTag() {
             var newTab = window.open('about:blank', '_blank');
             newTab.document.write('<style>body { margin: 0; }</style><iframe src="tag.html" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
@@ -269,15 +232,12 @@
             newTab.document.write('<style>body { margin: 0; }</style><iframe src="https://procoder26.github.io/minecraft/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
             newTab.document.close();
         }
-
         function openFB(a) {
             var newTab = window.open('about:blank', '_blank');
             var content = '<style>body { margin: 0; }</style>' + a ;
             newTab.document.write(content);
             newTab.document.close();
         }
-
-
         function openRB() {
             var newTab = window.open('about:blank', '_blank');
             newTab.document.write('<style>body { margin: 0; }</style><iframe src="https://procoder26.github.io/retrobowl/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>');
@@ -294,7 +254,4 @@
             window.location.href = "index.html";
         }
     </script>
-
 </body>
-
-</html>
